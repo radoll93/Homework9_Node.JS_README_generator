@@ -4,7 +4,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
 // TODO: Create an array of questions for user input
-const questions = ['What is your Github username?', 
+const questions = ['What is your Github username?', c
 'What is your email address?',
 "What is your project's name?",
 'Please write a short description of your project',
@@ -12,7 +12,8 @@ const questions = ['What is your Github username?',
 'What command should be run to install dependencies?',
 'What command should be run to run tests?',
 'What does the user need to know about using the repo?',
-'What doew the user need to know about contributing to the repo?'];
+'What doew the user need to know about contributing to the repo?'
+];
 
 // TODO: Create a function to write README file
 inquirer
@@ -20,53 +21,59 @@ inquirer
     {
         type: 'input',
         message: questions[0],
-        name: 'name'
+        name: 'Name'
     },
     {
         type: 'input',
         message: questions[1],
-        name: 'email'
+        name: 'Question'
     },
     {
         type: 'input',
         message: questions[2],
-        name: 'project'
+        name: 'Project'
     },
     {
         type: 'input',
         message: questions[3],
-        name: 'description'
+        name: 'Description'
     },
     {
-        type: 'input',
+        type: 'input', 
+        // type -> change to choose
         message: questions[4],
-        name: 'license'
+        name: 'License'
     },
     {
         type: 'input',
         message: questions[5],
-        name: 'installCommand'
+        name: 'Installation'
     },
     {
         type: 'input',
         message: questions[6],
-        name: 'runCommand'
+        name: 'Test'
     },
     {
         type: 'input',
         message: questions[7],
-        name: 'usingRepo'
+        name: 'Usage'
     },
     {
         type: 'input',
         message: questions[8],
-        name: 'repoContributord'
+        name: 'Contributing'
     }
     
-]);
+])
 
+.then((response) => writeToFile('README.md', response));
 
 function writeToFile(fileName, data) {
+    fs.appendFile(fileName, `${generateMarkdown(data)}`, (err) => {
+        
+    }
+    )
 
 }
 
