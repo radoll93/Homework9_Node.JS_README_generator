@@ -1,7 +1,4 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
-
-const { fstat } = require("fs");
-
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   const licenseBadge = [ '![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)', 
@@ -12,7 +9,7 @@ function renderLicenseBadge(license) {
     return licenseBadge[0];
   } else if(license === 'GPLv3') {
     return licenseBadge[1];
-  } else {
+  } else if(license === 'AGPL') {
     return licenseBadge[2];
   }
 }
@@ -29,7 +26,7 @@ function renderLicenseLink(license) {
     return licenseLink[0];
   } else if(license === 'GPLv3') {
     return licenseLink[1];
-  } else {
+  } else if(license === 'AGPL') {
     return licenseLink[2];
   }
 }
@@ -52,27 +49,32 @@ function generateMarkdown(data) {
   renderLicenseSection(data.license);
 
   return `
-  #${data.project}\n 
+  \n
 
+  #${data.project}
 
-  ##Description \n 
+  ##Description 
+
   ${data.description}
 
-  ##Table of Contents \n 
-- [Installation](#installation)
-- [Usage](#usage)
-- [License](#license)
-- [Contributing](#Contributing)
-- [Test](#Test)
-- [Question](#Question)
+  ##Table of Contents 
+
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Contributing](#Contributing)
+* [Test](#Test)
+* [Question](#Question)
 
   ##Installation
+
     ---
-    To install necessary depedencies, run the following command : \n
+    To install necessary depedencies, run the following command :
+    
     ${data.installation}\n
     ---
 
-  ##Usage\n
+  ##Usage
     ${data.usage}\n
 
   ##License
@@ -85,13 +87,15 @@ function generateMarkdown(data) {
 
     ---
     To run the test, run the following command:
+    
     ${data.test}\n
     ---
 
   ##Question
+
   If you have any question about the repo, open an issue or contact me directly at ${data.question}. You can find more of my work at https://github.com/${data.name}.
   \n
-  
+
   `;
     
 
