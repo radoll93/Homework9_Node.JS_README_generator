@@ -1,7 +1,6 @@
   ![README generator](./assets/README_generator.gif)
 
 
-
 # README generator
 
 
