@@ -49,52 +49,55 @@ function generateMarkdown(data) {
   renderLicenseSection(data.license);
 
   return `
-  \n
+\n
 
-  #${data.project}
+#${data.project}\n
 
-  ##Description 
+##Description 
 
-  ${data.description}
+${data.description}\n
 
-  ##Table of Contents 
 
-* [Installation](#Installation)
-* [Usage](#Usage)
-* [License](#License)
-* [Contributing](#Contributing)
-* [Test](#Test)
-* [Question](#Question)
+##Table of Contents 
 
-  ##Installation
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Test](#Test)
+- [Question](#Question)
+\n
 
-    ---
-    To install necessary depedencies, run the following command :
-    
-    ${data.installation}\n
-    ---
+##Installation
 
-  ##Usage
-    ${data.usage}\n
+  ---
+  To install necessary depedencies, run the following command :
+  
+  **${data.installation}**\n
+  ---
 
-  ##License
-    This project is licensed under the ${data.license}\n
+##Usage\n
+  ${data.usage}\n
 
-  ##Contributing
-  ${data.contributing}\n
+##License\n
+  This project is licensed under the ${data.license}\n
 
-  ##Test
+##Contributing\n
+${data.contributing}\n
 
-    ---
-    To run the test, run the following command:
-    
-    ${data.test}\n
-    ---
+##Test
 
-  ##Question
+  ---
+  To run the test, run the following command:
+  
+  **${data.test}**\n
+  ---
 
-  If you have any question about the repo, open an issue or contact me directly at ${data.question}. You can find more of my work at https://github.com/${data.name}.
-  \n
+##Question
+
+If you have any question about the repo, open an issue or contact me directly at ${data.question}. You can find more of my work at https://github.com/${data.name}.
+\n
+\n
 
   `;
     
