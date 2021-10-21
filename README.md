@@ -1,17 +1,17 @@
-![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?) https://opensource.org/licenses/MIT
+  ![README generator](./assets/README_generator.gif)
 
 
 
-#README generator
+# README generator
 
 
-##Description 
+## Description 
 
 It automatically generates cool README file
 
 
 
-##Table of Contents 
+## Table of Contents 
 
 - [Installation](#Installation)
 - [Usage](#Usage)
@@ -22,7 +22,7 @@ It automatically generates cool README file
 
 
 
-##Installation
+## Installation
 
   ---
   To install necessary depedencies, run the following command :
@@ -31,22 +31,24 @@ It automatically generates cool README file
 
   ---
 
-##Usage
+## Usage
 
   nothing
 
 
-##License
+
+## License
 
   This project is licensed under the MIT
 
 
-##Contributing
+
+## Contributing
 
 nothing
 
 
-##Test
+## Test
 
   ---
   To run the test, run the following command:
@@ -55,12 +57,11 @@ nothing
 
   ---
 
-##Question
+## Question
 
 If you have any question about the repo, open an issue or contact me directly at bbora1119@gmail.com. You can find more of my work at https://github.com/radoll93.
 
 
 
 
-
-  
+  ![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?) https://opensource.org/licenses/MIT
