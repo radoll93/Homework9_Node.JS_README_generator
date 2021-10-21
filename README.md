@@ -1,9 +1,9 @@
   ![README generator](./assets/README_generator.gif)
 
 
-```
-Generated README sample
-```
+
+> Generated README sample
+---
 
 # README generator
   
@@ -67,9 +67,11 @@ nothing
 If you have any question about the repo, open an issue or contact me directly at bbora1119@gmail.com. You can find more of my work at https://github.com/radoll93.
 
 
-```
-in case of no license
-```
+
+
+> In case of no license
+---
+
 
 # README generator_no license
   
@@ -98,7 +100,7 @@ it is no license test
   ---
   To install necessary depedencies, run the following command :
   
-  ****
+  ****npm install
 
   ---
 
@@ -123,7 +125,7 @@ it is no license test
   ---
   To run the test, run the following command:
   
-  ****
+  ****node index.js
 
   ---
 
