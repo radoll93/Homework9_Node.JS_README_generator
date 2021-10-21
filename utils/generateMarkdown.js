@@ -11,6 +11,8 @@ function renderLicenseBadge(license) {
     return licenseBadge[1];
   } else if(license === 'AGPL') {
     return licenseBadge[2];
+  } else {
+    return ' ';
   }
 }
   
@@ -28,17 +30,29 @@ function renderLicenseLink(license) {
     return licenseLink[1];
   } else if(license === 'AGPL') {
     return licenseLink[2];
+  } else {
+    return ' ';
   }
 }
 
-const fs = require('fs');
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-  const badgeLink = renderLicenseBadge(license) + ' ' + renderLicenseLink(license);
-  fs.appendFile('README.md', badgeLink, (err) =>
-  err ? console.error('badge error'): console.log('badge success'))
+  const link = renderLicenseLink(license);
+
+  if (link === ' ') {
+    return `## License\n
+    There is no license here.
+    `
+  } else {
+    return `## License\n
+  This project is licensed under the ${license}. ${link}
+
+  `
+    
+  }
 }
 
 
@@ -46,10 +60,13 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   
-renderLicenseSection(data.license);
+const badge = renderLicenseBadge(data.license);
+const licensesection = renderLicenseSection(data.license);
+
 
 return `
-# ${data.project}\n
+# ${data.project}\n  
+${badge}
 \n
 ## Description 
 
@@ -78,9 +95,7 @@ ${data.description}\n
   ${data.usage}\n
 
 
-## License\n
-  This project is licensed under the ${data.license}\n
-
+${licensesection}
 
 ## Contributing\n
 ${data.contributing}\n

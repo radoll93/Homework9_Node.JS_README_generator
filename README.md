@@ -1,7 +1,10 @@
   ![README generator](./assets/README_generator.gif)
 
 
+
 # README generator
+  
+![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)
 
 
 ## Description 
@@ -38,9 +41,9 @@ It automatically generates cool README file
 
 ## License
 
-  This project is licensed under the MIT
+  This project is licensed under the MIT. https://opensource.org/licenses/MIT
 
-
+  
 
 ## Contributing
 
@@ -63,4 +66,5 @@ If you have any question about the repo, open an issue or contact me directly at
 
 
 
-  ![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?) https://opensource.org/licenses/MIT
+
+  

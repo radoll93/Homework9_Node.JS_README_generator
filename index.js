@@ -32,7 +32,8 @@ const questions = [
         choices: [
             'MIT',
             'GPLv3',
-            'AGPL'
+            'AGPL',
+            'no license'
           ]
     },
     {
